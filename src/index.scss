@@ -1,0 +1,103 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+#app {
+  width: 100%;
+  height: 100%;
+  background-color: antiquewhite;
+}
+// Remove origin BMap label size
+.BMapLabel {
+  width: 0 !important;
+  height: 0 !important;
+}
+// Custom BMap label style
+.container {
+  cursor: pointer;
+  position: relative;
+  width: 186px;
+  height: 67px;
+  top: -60px;
+  left: -18px;
+  background: url(./assets/jiaoban.png) no-repeat;
+  background-size: contain;
+  & > .town-name {
+    position: absolute;
+    top: 23px;
+    left: 65px;
+    font-size: 15px;
+    font-family: Alibaba-PuHuiTi-Regular;
+    font-weight: 400;
+  }
+  & > .school-number {
+    position: absolute;
+    top: 23px;
+    left: 150px;
+    font-size: 15px;
+    font-family: Alibaba-PuHuiTi-Regular;
+    font-weight: 400;
+    color: #00a1ff;
+  }
+}
+// Remove origin BMap infoWindow's shadow
+.shadow {
+  display: none;
+}
+// Custom BMap infoWindow
+.BMap_bubble_pop {
+  padding: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  border: none !important;
+}
+.BMap_bubble_top {
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+.BMap_bubble_center {
+  width: 0 !important;
+  height: 0px !important;
+  overflow: visible !important;
+}
+.BMap_bubble_content {
+  position: absolute !important;
+  top: 168px !important;
+  left: 100px !important;
+  height: 0px !important;
+  overflow: visible !important;
+}
+.poper_content {
+  padding: 0;
+  margin: 0;
+  width: 180px;
+  height: 231px; // <= (27 + 3*2) * 7
+  overflow: hidden;
+  background: linear-gradient(135deg, transparent 10px, #1f2930 0) bottom right !important;
+  & > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & > li {
+      text-align: center;
+      padding: 3px 0;
+      font-size: 15px;
+      font-family: Alibaba-PuHuiTi-Regular;
+      font-weight: 400;
+      color: #d7d9db;
+      line-height: 27px;
+      transition: all linear 0.2s;
+      cursor: pointer;
+      &:hover {
+        color: #7e7e7e;
+      }
+    }
+    & > li:nth-child(2n) {
+      background-color: #35414a;
+    }
+  }
+}
